@@ -1,0 +1,255 @@
+h2{ 
+  font-size: 32px;
+  line-height: 1.3;
+}
+
+body{ 
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 50px;
+  background-color: #fff;
+/*  border-bottom: 1px solid rgba(0,0,0,.1);*/
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.4);
+  z-index:  1000;
+}
+
+header nav{
+  position: absolute;
+  left: 20px;
+  height: 30px;
+  top: 10px;
+  width: auto;
+  line-height: 30px;
+  color: #393939;
+}
+header nav a{
+  float: right;
+  height:  100%;
+}
+
+.link{
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.link:hover{
+  color: rgba(239,72,41,1) !important;
+}
+header nav a:after{
+  content: "|";
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: bold;
+  float: right;
+}
+header nav a:first-child:after{ content: none; padding: 0;}
+footer{ 
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height:  50px;
+  border-top: 1px solid rgba(0,0,0,.1);
+  background-color: #e1e5e8;
+  z-index: 1000;
+  display: none;
+}
+
+main{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 50px 0;
+}
+
+#post_flow{
+  position: relative;
+  width: 627px;
+  margin: 0 auto;
+  height: auto;
+  margin-top: 20px;
+}
+
+#comment_flow{
+  float: left;
+  width: 100%;
+  height:  auto;
+  margin-top: 20px;
+}
+
+.comment_entry{
+  float: left;
+  width: 597px;
+  padding: 15px;
+  height:  auto;
+  background-color: #e9e9e9;
+  min-height: 0;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.comment_timestamp{
+  float:  left;
+  height: 10px;
+  font-size: 13px;
+  color: #6f6f6f;
+  width: 100%;
+}
+
+.comment_body{
+  float:  left;
+  height: auto;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #393939;
+}
+
+.comment_entry .form_comment{
+  float: left;
+  width: 587px;
+  height: 30px;
+  box-shadow: none;
+  border: none;
+  padding: 0 5px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #393939;
+}
+
+.post_entry{
+  float: left;
+  width: 100%;
+  height:  auto;
+  min-height: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.post_entry .post_header{
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  color: #393939;
+}
+.post_entry .post_timestamp{
+  float: left;
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  color: rgba(239,72,41,1);
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #393939;
+  font-weight: 300;
+}
+.post_timestamp span{ float: left; display: inline; height: 100%; line-height: 25px; margin-right: 10px;}
+.post_entry .post_body{
+  margin-top: 10px;
+  float: left;
+  height: auto;
+  width: 100%;
+  color: #333;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.post_ctrl{
+  float: left;
+  color: rgba(239,72,41,1);
+  text-transform: uppercase;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 0;
+}
+.post_ctrl:hover {text-decoration: underline;}
+
+.divider{
+  float: left;
+  display: inline;
+  padding: 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px !important;
+  margin: 0 !important;
+  vertical-align: top;
+  color: rgba(239,72,41,1);
+}
+
+#form_post{
+  float: left;
+  height: auto;
+  min-height: 300px;
+  width: 585px;
+  border: 1px solid rgba(0,0,0,.2);
+  padding: 20px;
+}
+
+#form_post label{ 
+  float: left;
+  width: 100%;
+  text-transform: capitalize;
+  height: 30px; 
+  margin-bottom: 15px; 
+  font-size: 32px;
+  line-height: 1.3;
+}
+#form_post .post_title{
+  float: left;
+  width: 565px;
+  padding: 10px;
+  height: 15px;
+  color: #393939;
+  font-size: 15px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+#form_post .post_body{
+  float:  left;
+  width: 565px;
+  padding: 0;
+  padding: 10px;
+  height:  300px;
+  color:  #393939;
+  font-size: 15px;
+  line-height: 1.2;
+  resize: none;
+  border: 1px solid #ccc;
+}
+
+input.post[type="submit"]{
+  height: 40px;
+  background-color: rgba(239,72,41,1);
+  width: 120px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  color: #f0f0f0;
+  margin-top: 20px;
+  float: right;
+  cursor: pointer;
+}

@@ -1,0 +1,18 @@
+<main>
+  <section id="post_flow">
+    <% if @render_form %>
+    <form id="form_post" action="/post/<%= @post.id %>" method="post">
+    <% else %>
+    <form id="form_post" action="/post" method="post">
+    <% end %>
+      <label>Title</label>
+      <input type="text" class="post_title" name="title" autofocus value="<%= @post.title if @render_form %>">
+      <label>Content</label>
+      <textarea class="post_body" name="body"><%= @post.body if @render_form %></textarea>
+      <% if @render_form %>
+      <input type="hidden"  name="_method" value="put">
+      <% end %>
+      <input class="post" type="submit" value="Submit">
+    </form>
+  </section>
+</main>

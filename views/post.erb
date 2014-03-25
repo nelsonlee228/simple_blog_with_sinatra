@@ -1,0 +1,30 @@
+<main>
+  <section id="post_flow">
+   <div class="post_entry">  
+      <div class="post_header link">
+        <h2><%= @post.title %></h2>
+      </div>
+      
+      <div class="post_timestamp"><%= @post.created_at %></div>
+      
+      <div class="post_body">
+        <p>
+          <%= @post.body %>
+        </p>
+      </div>
+    </div>
+    <div id="comment_flow">
+      <div class="comment_entry">
+        <form action="/post/<%= @post.id %>/comment" method="post">
+          <input type="text" class="form_comment" name="comment" placeholder="Comment">
+        </form>
+      </div>
+      <% @comments.each do |comment| %>
+      <div class="comment_entry">
+        <div class="comment_timestamp"> <%= comment.created_at %></div>
+        <div class="comment_body"><%= comment.comment %></div>
+      </div>
+      <% end %>
+    </div>
+  </section>
+</main>

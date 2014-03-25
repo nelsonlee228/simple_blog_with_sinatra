@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>My Blog</title>
+<link rel="stylesheet" href= "<%= url("/css/reset.css") %>">
+<link rel="stylesheet" href= "<%= url("/css/application.css") %>">
+
+
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="/admin"><span class="link">Admin</span></a>
+    <a href="/post"><span class="link">New Post</span></a>
+    <a href="/"><span class="link">Blog</span></a>
+  </nav>
+
+</header>
+
+<%= yield %>
+
+<footer>
+</footer>
+
+</body>
+
+</html>
